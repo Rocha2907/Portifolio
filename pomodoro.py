@@ -42,13 +42,14 @@ def iniciar_timer(duracao,tipo):
 
     timer(duracao)
 
-
+# Responsavel por atualizar o timer na tela do programa e formatar
 def atualizar_display(tempo_restante,tipo):         
             minutos = tempo_restante // 60
             seg = tempo_restante % 60
             tempo_formatado = f'{minutos:02d}:{seg:02d}'
             label.config(text=f'{tipo}: {tempo_formatado}')
-
+    
+# Responsavel por mudar os clicos de estudo
 def proxima_sessao(tipo):
     global ciclos_concluidos
     if 'Hora de estudar' in tipo: 
